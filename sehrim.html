@@ -1,0 +1,254 @@
+<?php
+    session_start();
+
+    // Oturumda giriş yapılmamışsa, kullanıcıyı giriş sayfasına yönlendir
+    if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+        header("Location: giris.html");
+        exit;
+    }
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GİRESUN</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">GİRESUN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="anasayfa.html">Anasayfa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="hakkimda.html">Hakkımda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sehrim.html">Şehrim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="takim.html">Takımım</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="iletisim.html">İletişim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="giris.html">Giriş Yap</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h1 class="text-center">Giresun</h1>
+                <p class="text-center">Giresun, fındığı ile tanınan ve Karadeniz Bölgesi'nin doğusunda yer alan bir
+                    ildir.Kirazın bütün dünyaya buradan yayıldığı kabul edilir. Karadeniz'e kıyısı olan Giresun doğudan
+                    batıya Trabzon, Gümüşhane, Erzincan, Sivas ve Ordu illeriyle çevrilidir. Trafik numarası 28'dir.
+                    Yerli halkın çoğunluğunu Çepniler oluşturur. 1500'lü yıllardaki Osmanlı Tahrir Defterlerinde yöreye
+                    Vilayet-i Çepni de denmektedir.Giresun ili, Mustafa Kemal'in 19 Mayıs 1919'da Samsun'a çıktıktan
+                    sonraki dönemde olan kişisel muhafızlarının (Topal Osman ve Silah Arkadaşları) memleketi olan bir
+                    ildir. Şehir, Aksu ve Batlama vadileri arasında denize doğru uzanan bir yarımada üzerinde
+                    kurulmuştur, tam karşısında Karadeniz'in bir adası olan Giresun Adası (Aretias) vardır. Giresun ili
+                    1920 yılına kadar Trabzon iline bağlı kalmış, bu tarihte müstakil sancak, 1923 yılında ise il
+                    olmuştur.Giresun yeryüzü şekilleri bakımından engebeli bir görünüşe sahiptir ve dağlar, vadiler ve
+                    dik kıyılar geniş yer kaplamaktadır. Karadeniz kıyısı boyunca uzanan oldukça dar ve alçak
+                    düzlüklerden oluşan bir kıyı şeridi ile güneyde Kelkit Çayı Vadisi arasını kaplayan Giresun Dağları
+                    şehrin yeryüzü şekillerinin çatısını meydana getirir. Kıyıdan 50–60 km içeride, kıyıya paralel
+                    olarak yükselen bu dağların ortalama yüksekliği 2000 metredir.Giresun ili nüfusu: 461.712'dir. Bu
+                    nüfusun % 67,41'ü şehirlerde yaşamaktadır (2023 sonu). İlin yüzölçümü 7.025 km2'dir. İlde km2'ye 66
+                    kişi düşmektedir. </p>
+                <h2 class="text-center">Gezilecek Yerler</h2>
+                <ol>
+                    <li>Giresun Adası <a
+                            href="https://www.kulturportali.gov.tr/turkiye/giresun/gezilecekyer/giresun-adasi?ysclid=lvz7ff0g40620039371">Daha
+                            fazla bilgi için buraya tıklayın</a>
+                    </li>
+                    <li>Giresun Müzesi <a
+                            href="https://www.kulturportali.gov.tr/turkiye/giresun/gezilecekyer/giresun-muzesi?ysclid=lvz7dcd7pe77529109">Daha
+                            fazla bilgi için buraya tıklayın</a>
+                    </li>
+                    <li>Giresun Kalesi <a
+                            href="https://www.kulturportali.gov.tr/turkiye/giresun/gezilecekyer/giresun-kalesi?ysclid=lvz7hx9wby701529156">Daha
+                            fazla bilgi için buraya tıklayın</a>
+                    </li>
+                    <li>Giresun Kümbet Yaylası <a
+                            href="https://www.kulturportali.gov.tr/turkiye/giresun/gezilecekyer/kumbet-yaylasi-1-2?ysclid=lvz7jlmtyo781965657">Daha
+                            fazla bilgi için buraya
+                            tıklayın</a></li>
+                    <li>Giresun Kuzalan Şelalesi <a
+                            href="https://www.kulturportali.gov.tr/turkiye/giresun/gezilecekyer/dereli-kuzalan-selalesi?ysclid=lvz7kwi48i406707326">Daha
+                            fazla bilgi için buraya
+                            tıklayın</a></li>
+                    <li>Giresun Mavi Göl <a
+                            href="https://www.kulturportali.gov.tr/turkiye/giresun/gezilecekyer/mavi-gol?ysclid=lvz7mj95wi2654460">Daha
+                            fazla bilgi için buraya tıklayın</a>
+                    </li>
+                    <li>Giresun Uluburun Plajı <a href="https://giresunbilgi.com.tr/uluburun-plaji-giresun/">Daha fazla
+                            bilgi için buraya
+                            tıklayın</a></li>
+                    <li>Giresun Zeytinlik Mahallesi <a
+                            href="https://www.kulturportali.gov.tr/turkiye/giresun/gezilecekyer/zeytinlik-mahallesi?ysclid=lvz7pvjl5617513718">Daha
+                            fazla bilgi için buraya
+                            tıklayın</a></li>
+                </ol>
+                <div id="carouselGezilecekYerler" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a
+                                href="https://www.kulturportali.gov.tr/turkiye/giresun/gezilecekyer/giresun-adasi?ysclid=lvz7ff0g40620039371"><img
+                                    src="RESİMLER/ada.jpg" class="d-block w-100" alt="Giresun Adası"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a
+                                href="https://www.kulturportali.gov.tr/turkiye/giresun/gezilecekyer/giresun-muzesi?ysclid=lvz7dcd7pe77529109"><img
+                                    src="RESİMLER/müze.jpg" class="d-block w-100" alt="Giresun Müzesi"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a
+                                href="https://www.kulturportali.gov.tr/turkiye/giresun/gezilecekyer/giresun-kalesi?ysclid=lvz7hx9wby701529156"><img
+                                    src="RESİMLER/giresun_kalesi.jpeg" class="d-block w-100" alt="Giresun Kalesi"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a
+                                href="https://www.kulturportali.gov.tr/turkiye/giresun/gezilecekyer/kumbet-yaylasi-1-2?ysclid=lvz7jlmtyo781965657"><img
+                                    src="RESİMLER/kümbet.jpg" class="d-block w-100" alt="Giresun Kümbet Yaylası"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a
+                                href="https://www.kulturportali.gov.tr/turkiye/giresun/gezilecekyer/dereli-kuzalan-selalesi?ysclid=lvz7kwi48i406707326"><img
+                                    src="RESİMLER/kuzalan.jpg" class="d-block w-100" alt="Giresun Kuzalan Şelalesi"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a
+                                href="https://www.kulturportali.gov.tr/turkiye/giresun/gezilecekyer/mavi-gol?ysclid=lvz7mj95wi2654460"><img
+                                    src="RESİMLER/mavi göl.jpg" class="d-block w-100" alt="Giresun Mavi Göl"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://giresunbilgi.com.tr/uluburun-plaji-giresun/"><img
+                                    src="RESİMLER/uluburun.jpg" class="d-block w-100" alt=" Giresun Uluburun Plajı"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a
+                                href="https://www.kulturportali.gov.tr/turkiye/giresun/gezilecekyer/zeytinlik-mahallesi?ysclid=lvz7pvjl5617513718"><img
+                                    src="RESİMLER/zeytinlik.jpg" class="d-block w-100"
+                                    alt="Giresun Zeytinlik Mahallesi"></a>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselGezilecekYerler" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselGezilecekYerler" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+                <h2 class="text-center mt-5">Yöresel Lezzetler</h2>
+                <ol>
+                    <li>Giresun Pidesi <a href="https://www.nefisyemektarifleri.com/giresun-yagli-pidesi/">Daha fazla
+                            bilgi için
+                            buraya tıklayın</a></li>
+                    <li>Mısır Ekmeği <a href="https://giresun.ktb.gov.tr/TR-208475/misir-unu-ekmegi.html">Daha fazla
+                            bilgi için buraya
+                            tıklayın</a></li>
+                    <li>Pancar Çorbası <a
+                            href="https://giresunbilgi.com.tr/pancar-corbasi-nasil-yapilir-giresun-2/">Daha fazla bilgi
+                            için
+                            buraya tıklayın</a></li>
+                    <li>Kiraz Tuzlusu <a
+                            href="https://www.nefisyemektarifleri.com/kiraz-tuzlamasi-giresun-yoresinden/">Daha fazla
+                            bilgi için buraya
+                            tıklayın</a></li>
+                    <li>Giresun Fındığı <a href="http://www.giresun.gov.tr/dunya-markasi-giresun-findigi">Daha fazla
+                            bilgi için
+                            buraya tıklayın</a></li>
+                    <li>Hamsi Böreği <a
+                            href="https://www.kulturportali.gov.tr/turkiye/giresun/neyenir/hamsi-boregi?ysclid=lvz8bxbf6o685684638">Daha
+                            fazla bilgi için buraya
+                            tıklayın</a></li>
+                    <li>Isırgan Çorbası <a
+                            href="https://www.nefisyemektarifleri.com/isirgan-corbasi-giresun-usulu/">Daha fazla bilgi
+                            için
+                            buraya tıklayın</a></li>
+                </ol>
+                <div id="carouselYoreselLezzetler" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="https://www.nefisyemektarifleri.com/giresun-yagli-pidesi/"><img
+                                    src="RESİMLER/giresunpidesi.jpg" class="d-block w-100" alt="Giresun Pidesi"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://giresun.ktb.gov.tr/TR-208475/misir-unu-ekmegi.html"><img
+                                    src="RESİMLER/mısırekmegi.png" class="d-block w-100" alt="Mısır Ekmeği"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://giresunbilgi.com.tr/pancar-corbasi-nasil-yapilir-giresun-2/"><img
+                                    src="RESİMLER/pancarcorbası.jpg" class="d-block w-100" alt="Pancar Çorbası"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://www.nefisyemektarifleri.com/kiraz-tuzlamasi-giresun-yoresinden/"><img
+                                    src="RESİMLER/kiraztuzlusu.jpg" class="d-block w-100" alt="Kiraz Tuzlusu"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="http://www.giresun.gov.tr/dunya-markasi-giresun-findigi"><img
+                                    src="RESİMLER/finduk.jpg" class="d-block w-100" alt="Giresun Fındığı"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a
+                                href="https://www.kulturportali.gov.tr/turkiye/giresun/neyenir/hamsi-boregi?ysclid=lvz8bxbf6o685684638"><img
+                                    src="RESİMLER/hamsiboregi.jpg" class="d-block w-100" alt="Hamsi Böreği"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://www.nefisyemektarifleri.com/isirgan-corbasi-giresun-usulu/"><img
+                                    src="RESİMLER/ısırgancorbası.webp" class="d-block w-100" alt="Isırgan Çorbası"></a>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselYoreselLezzetler" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselYoreselLezzetler" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="social-icons">
+        <a href="https://www.instagram.com/gurelnisanur?igsh=MXdkZzU2M2MxdjF2Yg==" class="social-icon"
+            target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/nisa-nur-g%C3%BCrel-b5586a27a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            class="social-icon" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/gurelnisanur?tab=repositories" class="social-icon" target="_blank"><i
+                class="fab fa-github"></i></a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
